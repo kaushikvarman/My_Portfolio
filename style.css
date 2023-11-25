@@ -55,30 +55,26 @@ footer,
 .portfolio-skills,
 .btn-bg,
 .portfolio,
-.skills,
-.skills2 {
+.skills {
   display: flex;
 }
 
 .hero,
 .portfolio,
-.skills,
-.skills2 {
+.skills {
   flex-direction: column;
 }
 
 .hero,
 .btn-bg,
 .portfolio,
-.skills,
-.skills2 {
+.skills {
   align-items: center;
 }
 
 .hero,
 .experience,
-.wrapper,
-.wrapper2 {
+.wrapper {
   text-align: center;
 }
 
@@ -86,8 +82,7 @@ article,
 .hero,
 .logo-container,
 .portfolio,
-.skills,
-.skills2 {
+.skills {
   gap: 1rem;
 }
 
@@ -116,10 +111,13 @@ article,
   width: 100%;
 }
 
+.wrapper video{
+  width: 100%;
+}
+
 .hero-pic img {
   height: 100%;
   object-fit: cover;
-  /* object-position: top 0.7rem right -0.4rem; */
   object-position: top -5.0rem right 1.0rem;
   transform: scale(1.9);
 }
@@ -197,7 +195,6 @@ footer,
 .btn-2,
 .btn-bg,
 .wrapper,
-.wrapper2,
 .project-wrapper {
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     background-color 0.3s ease, color 0.3s ease;
@@ -215,11 +212,17 @@ footer,
   cursor: pointer;
 }
 
+.wrapper video:hover {
+  cursor: pointer;
+}
+
+
 .btn:hover,
 .btn-2:hover,
 .project-wrapper:hover,
 .logo-container a:hover {
   transform: scale(0.98);
+  /* opacity: 0.3; */
 }
 
 .btn:active,
@@ -227,6 +230,7 @@ footer,
 .project-wrapper:active,
 .logo-container a:active {
   transform: scale(1);
+  
 }
 
 .contact-btn:hover,
@@ -268,8 +272,7 @@ footer,
 }
 
 .btn-bg,
-.wrapper,
-.wrapper2 {
+.wrapper {
   width: 20rem;
 }
 
@@ -280,17 +283,19 @@ article p,
 
 .hero,
 .portfolio,
-.skills,
-.skills2 {
+.skills {
   margin-top: 2rem;
 }
 
-.skills,
-.skills2 {
+.skills {
   display: none;
 }
 
 .wrapper img {
+  border-radius: 1rem;
+}
+
+.wrapper video {
   border-radius: 1rem;
 }
 
@@ -313,15 +318,15 @@ footer {
   margin: 3rem 0;
 }
 
+
+
 @media screen and (min-width: 900px) {
   .skills,
-  .skills2
   .portfolio {
     flex-direction: row;
     width: 45rem;
   }
-  .skills,
-  .skills2 {
+  .skills {
     margin: 2rem auto 0;
   }
   .portfolio {
@@ -329,8 +334,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .wrapper,
-  .wrapper2 {
+  .wrapper {
     width: calc(48%);
     flex: none;
   }
